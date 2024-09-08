@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+* {
+  font-family: 'Fredericka the Great', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background-image: url('assets/images/palette-green.png');
+  height: 100vh;
+  width: 100%;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100vh;
+  min-width: 760px;
+}
+
+.home-dp {
+  margin-bottom: 2rem;
+  background-image:  url('assets/images/profiledp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width:60%;
+  min-width: 220px;
+}
+
+
+.basics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 1700px){
+
+  .home-dp {
+    width: 40%;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-dp {
+    order: 0;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 1rem;
+  } 
+
+  .basics {
+    order: 1;
+    margin-top: 1rem;
+    height: 60vh;
+    width: 100%;
+    display: block;
+  }
+}
+
+.basic-info {
+  color: white;
+  margin: 0 auto;
+  padding: 2rem 0 0 2rem;
+  text-align: left;
+  height: 100vh;
+}
+
+.name {
+  font-size: 6rem;
+  opacity: 80%;
+}
+
+.self-dec {
+  word-wrap: break-word;
+  white-space: unset;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 98%;
+}
+
+.self-dec li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
