@@ -11,7 +11,7 @@
 
 body {
   margin: 0 auto;
-  background-image: url('assets/images/palette-green.png');
+  background-color: rgba(34,83,87,1);
   height: 100vh;
   width: 100%;
 }
@@ -35,53 +35,64 @@ body {
   min-width: 220px;
 }
 
+.nav-container {
+  position: fixed;
+}
 
 .basics {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100%;
 }
 
-@media (max-width: 1700px){
+.basic-info {
+  color: white;
+  margin: 0 auto;
+  text-align: left;
+  margin-left: 2rem;
+  text-align: center;
+}
 
+@media (max-width: 1700px) and (min-width:760px){
   .home-dp {
     width: 40%;
     background-size: contain;
+    height: 100vh;
+    background-color: rgba(34,83,87,0.5);
   }
 }
+
 
 @media (max-width: 760px) {
 
   .home-container {
     flex-direction: column;
+    height: fit-content;
   }
 
   .home-dp {
     order: 0;
     width: 100%;
     background-size: cover;
-    margin-bottom: 1rem;
+    position: fixed;
+    z-index: -1;
   } 
 
   .basics {
     order: 1;
-    margin-top: 1rem;
     height: 60vh;
     width: 100%;
     display: block;
+    height: 100vh;
+    margin-top: 1200px;
+    padding-top: 10vh;
+    background-color: rgba(34,83,87,0.5);
   }
 }
 
-.basic-info {
-  color: white;
-  margin: 0 auto;
-  padding: 2rem 0 0 2rem;
-  text-align: left;
-  height: 100vh;
-}
 
 .name {
   font-size: 6rem;
@@ -99,4 +110,11 @@ body {
 .self-dec li {
   list-style: none;
   margin-bottom: 1rem;
+}
+
+.skills {
+  margin: 0 auto;
+  padding: 2rem 0 0 2rem;
+  text-align: left;
+  font-size: 2.7rem;
 }
